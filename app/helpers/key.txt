@@ -1,0 +1,2 @@
+WEATHER_API_KEY=17ac356fce697a753b9474155a92c222 rails s
+http://localhost:3000

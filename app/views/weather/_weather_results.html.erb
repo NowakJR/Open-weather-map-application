@@ -1,0 +1,47 @@
+<%- weather = @weather[0]%>
+<%- if weather["cod"] == 200 %>
+  <h2>Current Weather for <%= weather["name"] %></h2>
+
+  <table id="weather_table">
+    <tr>
+      <th>Current Weather</th>
+      <td><%= weather['weather'].map{|w| w["description"].capitalize}.join("/") %></td>
+    </tr>
+    <tr>
+      <th>Current Temperature</th>
+      <td><%= weather['main']["temp"].round %>&deg;C </td>
+    </tr>
+    <tr>
+      <th>Highest Temp</th>
+      <td><%= weather['main']["temp_max"].round %>&deg;C</td>
+    </tr>
+    <tr>
+      <th>Lowest Temp</th>
+      <td><%= weather['main']["temp_min"].round %>&deg;C</td>
+    </tr>
+    <tr>
+      <th>Pressure</th>
+      <td><%= weather['main']["pressure"]%><small>Pa</small></td>
+    </tr>
+    <tr>
+      <th>Humidity</th>
+      <td><%= weather['main']["humidity"]%>%</td>
+    </tr>
+    <tr>
+      <th>Wind</th>
+      <td><%= weather['wind']["speed"].round%>km/h</td>
+    </tr>
+    </tr>
+    <tr>
+      <th>Cloudiness</th>
+      <td><%= weather["clouds"]['all'] %>%</td>
+    </tr>
+    </tr>
+    <tr>
+      <th>Visibility</th>
+      <td><%= ((weather["visibility"] / 1000) ).round %>km</td>
+    </tr>
+  </table>
+<%- else %>
+  <p>That city does not exist</p>
+<%- end %>

@@ -1,0 +1,44 @@
+
+@import 'bootstrap';
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body{
+  font-family: 'Roboto', sans-serif;
+}
+#weather_results{
+  text-align: center;
+}
+#search_form{
+  text-align: center;
+}
+#weather_table{
+  width: 25rem;
+  border: 1px solid #AEAEAE;
+  border-collapse: collapse;
+  th, td {
+    border: 1px solid #AEAEAE;
+    padding: 0.25rem;
+  }
+  margin: 0 auto;
+  th{text-align: right; background-color: 	#4DE8FF;}
+  td{text-align: left;}
+}
+.weather_details{
+
+
+  text-align: center;
+}
